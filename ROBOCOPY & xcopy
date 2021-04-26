@@ -1,0 +1,11 @@
+# copy
+ROBOCOPY  "from" "to"   /E /ZB /SEC /V /TEE /R:1 /LOG:c:robo_log.txt
+
+
+# move \ copy files older than
+
+### move all files older than x days
+robocopy "source" "destination" /move /minage:10
+
+### copy files was created from date:
+xcopy "source\*.txt" "destination" /D:01-01-2015
