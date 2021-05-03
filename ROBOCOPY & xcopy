@@ -1,5 +1,7 @@
-# copy
-ROBOCOPY  "from" "to"   /E /ZB /SEC /V /TEE /R:1 /LOG:c:robo_log.txt
+# copy #####
+##
+# @echo off
+# ROBOCOPY  "from" "to"   /E /ZB /SEC /V /TEE /R:1 /LOG:c:robo_log.txt
 
 
 # move \ copy files older than
