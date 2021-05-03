@@ -1,13 +1,31 @@
-# copy #####
-##
+##########################################################################
+#COPY#####################################################################
+##########################################################################
 # @echo off
 # ROBOCOPY  "from" "to"   /E /ZB /SEC /V /TEE /R:1 /LOG:c:robo_log.txt
 
+#                  /e	Copies subdirectories. This option automatically includes empty directories.
+#                  /zb	Copies files in restartable mode. If file access is denied, switches to backup mode.
+#                  /sec	Copies files with security (equivalent to /copy:DATS).
+#                  /v	Produces verbose output, and shows all skipped files.
+#                  /tee	Writes the status output to the console window, as well as to the log file.
+
+##########################################################################
+#MOVE#####################################################################
+##########################################################################
 
 # move \ copy files older than
 
 ### move all files older than x days
 robocopy "source" "destination" /move /minage:10
 
+##########################################################################
+#XCOPY####################################################################
+##########################################################################
+
 ### copy files was created from date:
 xcopy "source\*.txt" "destination" /D:01-01-2015
+
+##########################################################################
+##########################################################################
+##########################################################################
