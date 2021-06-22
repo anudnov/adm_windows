@@ -1,0 +1,7 @@
+#  To stop all Veeam named services:
+
+Get-Service Veeam* | Stop-Service
+
+# To start all Veeam named services:
+
+Get-Service Veeam* | Start-Service
