@@ -5,3 +5,7 @@ Get-Service Veeam* | Stop-Service
 # To start all Veeam named services:
 
 Get-Service Veeam* | Start-Service
+
+# Set type:
+Set-Service -Name Veeam* -StartupType Automatic
+Set-Service -Name Veeam* -StartupType manual
