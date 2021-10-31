@@ -1,3 +1,39 @@
-1. Stop Veeam ONE Services
-    stop-service VeeamDCS
-    stop-service VeeamRSS
+# 1. Stop Veeam ONE Services
+stop-service VeeamDCS
+stop-service VeeamRSS
+
+# 2. Backup your Veeam ONE SQL database
+BACKUP DATABASE [VeeamOne] TO  DISK = N'C:\Backup\veeamone.bak' WITH NOFORMAT, NOINIT,  NAME = N'VeeamOne-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
+GO
+
+# 3. Identify a range of records to delete
+USE [VeeamOne]
+GO
+SELECT * from monitor.Event
+where time &lt;'2015-06-06';
+GO
+
+# 4. Execute deletion of required records
+USE [VeeamOne]
+GO
+DELETE from monitor.Event
+where time &lt;'2015-06-06';
+GO
+
+# 5. Backup SQL DB again
+
+# 6. Shrink Transaction Log
+USE [VeeamOne]
+GO
+DBCC SHRINKFILE (N'VeeamOne_log' , 0, TRUNCATEONLY)
+GO
+
+# 8. This step should be carried out only once the database has been trimmed down to a suitable size
+USE [VeeamOne]
+GO
+DBCC SHRINKFILE (N'VeeamOne' , 0, TRUNCATEONLY)
+GO
+
+# 9. Now it should be ok to restart Veeam ONE services to restore service
+start-service VeeamDCS
+start-service VeeamRSS
