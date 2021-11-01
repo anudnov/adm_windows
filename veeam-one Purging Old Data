@@ -31,12 +31,28 @@ DELETE from monitor.Event
 WHERE description like '%%'
 GO
 
+
+
+
+
 > Example: delte old data from PerfSampleLow7
 ```
 DELETE
       FROM [VeeamONE].[monitor].[PerfSampleLow7]
        where timestamp <= '2021-10-01 02:00:00.000'
 ```
+
+### With `pip`
+
+```shell
+pip install eg
+```
+
+
+
+
+
+
 
 
 # 5. Backup SQL DB again
