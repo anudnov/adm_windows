@@ -9,15 +9,26 @@ GO
 # 3. Identify a range of records to delete
 USE [VeeamOne]
 GO
-SELECT * from monitor.Event
-where time &lt;'2015-06-06';
-GO
+SELECT TOP (1000) [id]
+      ,[internal_id]
+      ,[entity_id]
+      ,[host_id]
+      ,[time]
+      ,[category]
+      ,[description]
+      ,[initiator]
+      ,[initiator_id]
+      ,[type]
+      ,[task_type]
+      ,[task_status]
+FROM [VeeamONE].[monitor].[Event]
+WHERE description like '%%'
 
 # 4. Execute deletion of required records
 USE [VeeamOne]
 GO
 DELETE from monitor.Event
-where time &lt;'2015-06-06';
+WHERE description like '%%'
 GO
 
 # 5. Backup SQL DB again
