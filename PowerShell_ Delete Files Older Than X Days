@@ -1,5 +1,12 @@
+### How to count the files in a folder: 
+cd D:\temp
+(Get-ChildItem | Measure-Object).Count
+
+### How to delete files in folder:
 ### 1.Open a new PowerShell window.
 ### 2.Type the following command:
+
+
 
 Get-ChildItem “%userprofile%\Downloads” -Recurse | Where-Object {($_.LastWriteTime -lt (Get-Date).AddDays(-30))}| Remove-Item
 
