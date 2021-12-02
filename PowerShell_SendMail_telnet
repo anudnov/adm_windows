@@ -1,0 +1,13 @@
+telnet "server address" 25
+
+ehlo domain.name
+mail from: test@domain.name
+rcpt to: user@domain.name
+
+data
+Subject: My Telnet Test Email
+Hello,
+This is an email sent by using the telnet command.
+Your friend,
+Me
+.
