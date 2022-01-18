@@ -16,8 +16,8 @@ _If the Get-ChildItem cmdlet finds any files that are older than a month, then t
 
 ## Delete Files Older Than X Days:
 
-# Open a new PowerShell window.
-# Type the following command:
+##### Open a new PowerShell window.
+##### Type the following command:
 ```
 Get-ChildItem “%userprofile%\Downloads” -Recurse | Where-Object {($_.LastWriteTime -lt (Get-Date).AddDays(-30))}| Remove-Item
 ```
