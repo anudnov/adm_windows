@@ -1,5 +1,5 @@
 #################################################################################################
-How to assign static IP address using Command Prompt
+#### How to assign static IP address using Command Prompt
 ```
 netsh interface ip show config
 ```
@@ -14,7 +14,7 @@ netsh interface ip set address "Ethernet" dhcp
 netsh interface ip set dns "Ethernet" dhcp
 ```
 #################################################################################################
-How to assign static IP address using PowerShell
+#### How to assign static IP address using PowerShell
 ```
 Get-NetIPConfiguration
 ```
@@ -26,6 +26,6 @@ Set-DnsClientServerAddress -InterfaceIndex 12 -ServerAddresses 1.1.1.1, 8.8.8.8
 Set-NetIPInterface -InterfaceIndex 12 -Dhcp Enable
 Get-NetIPAddress -InterfaceIndex 12 | Remove-NetRoute
 ```
-# Set-NetIPInterface -InterfaceAlias 'Ethernet 4' -Dhcp Enabled
+_Set-NetIPInterface -InterfaceAlias 'Ethernet 4' -Dhcp Enabled_
 
 #################################################################################################
