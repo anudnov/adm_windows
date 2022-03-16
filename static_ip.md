@@ -1,6 +1,8 @@
 #################################################################################################
 How to assign static IP address using Command Prompt
+```
 netsh interface ip show config
+```
 ipconfig /all
 
 netsh interface ip set address name="Ethernet" static 10.1.0.17 255.255.255.0 10.1.0.254
