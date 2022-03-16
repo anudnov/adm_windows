@@ -3,7 +3,7 @@
 ```
 netsh interface ip show config
 ```
-ipconfig /all
+_ipconfig /all_
 ```
 netsh interface ip set address name="Ethernet" static 10.1.0.17 255.255.255.0 10.1.0.254
 netsh interface ip set dns name="Ethernet" static 1.1.1.1
