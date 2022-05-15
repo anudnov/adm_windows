@@ -1,3 +1,7 @@
-PowerShell Get File Creation TimeStamp
+PowerShell Get File Creation TimeStamp:
 
 Get-ChildItem -Path D:\demo\*.bat | select Name,CreationTime 
+
+
+Get file - File Name, CreationTime, LastWriteTime, FullName(location):
+Get-ChildItem -Path D:\demo\*.bat -Recurse | select Name,CreationTime,LastWriteTime,FullName
