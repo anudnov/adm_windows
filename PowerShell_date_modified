@@ -1,0 +1,3 @@
+PowerShell Get File Creation TimeStamp
+
+Get-ChildItem -Path D:\demo\*.bat | select Name,CreationTime 
