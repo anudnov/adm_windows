@@ -43,3 +43,4 @@ CLOSE user_db_cursor
 DEALLOCATE user_db_cursor
 
 ```
+3. Create job in Task Scheduler
