@@ -1,9 +1,9 @@
-1. BAT file: 
+#### 1. BAT file: 
 ```
 sqlcmd -i C:\backup_script\backupall.sql > C:\backup_script\backuplog.txt 
 ```
 
-2. SQL file:
+#### 2. SQL file:
 ```
 DECLARE @basePath varchar(300); 
 SET @basePath = N'C:\backupsql\bak\'; 
@@ -43,4 +43,4 @@ CLOSE user_db_cursor
 DEALLOCATE user_db_cursor
 
 ```
-3. Create new task in "Task Scheduler"
+#### 3. Create new task in "Task Scheduler"
