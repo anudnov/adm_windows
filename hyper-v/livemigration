@@ -1,0 +1,1 @@
+Get-VM VMname | Move-ClusterVirtualMachineRole -MigrationType Live -Node "NODE_NAME" -Wait 0
