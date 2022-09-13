@@ -1,0 +1,1 @@
+Get-VMProcessor -VMName * -ComputerName NODE_NAME
