@@ -1,0 +1,2 @@
+Get-VMsnapshot –VMname * -ComputerName NODE_NAME | Out-File -FilePath D:\Log\VMsnapshot.txt
+Get-VMSnapshot -ComputerName "NODE_NAME" -VMName "VM_NAME" | Remove-VMSnapshot
