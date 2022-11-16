@@ -11,6 +11,7 @@ Send-MailMessage -To “mail@domain.name” -From “mail@domain.name”  -Subje
 
 # Send email SMTP with PowerShell
 # test send an email SMTP with an account to authenticate the mail server.
+# Original post: https://devopslite.com/how-to-send-mail-smtp-with-powershell/
 <#
 $username = 'usertest'
 $password = 'Passtest123'
