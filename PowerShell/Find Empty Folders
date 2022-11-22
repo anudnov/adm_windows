@@ -1,1 +1,8 @@
 (gci d:\demo -r | ? {$_.PSIsContainer -eq $True}) | ? {$_.GetFiles().Count -eq 0} | select FullName
+
+#########################################################################################################
+
+$share = Get-ChildItem 'd:\demo' -Recurse | Where { $_.PsIsContainer -eq $true }
+$share | Where { $_.GetFiles().Count -eq 0 -and $_.GetDirectories().Count -eq 0 }
+
+#########################################################################################################
