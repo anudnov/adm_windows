@@ -1,0 +1,1 @@
+Get-ChildItem  -Path D:\demo *.txt -Recurse
