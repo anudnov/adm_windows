@@ -1,5 +1,5 @@
 ```
-(Get-ChildItem \\hyperv005\c$\ClusterStorage\ -Recurse khun-law*) | Format-Table FullName
+(Get-ChildItem d:\demo\ -Recurse FILE_NAME*) | Format-Table FullName
 ```
 ```
 Get-ChildItem  -Path D:\demo *.txt -Recurse
