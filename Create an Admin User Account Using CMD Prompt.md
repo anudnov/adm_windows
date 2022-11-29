@@ -1,7 +1,7 @@
 Open CMD Prompt..
 Add Username and Password:
 ```
-net user /add [*username] [password]
+net user /add [*username] "[password]"
 ```
 Add as Admin:
 ```
