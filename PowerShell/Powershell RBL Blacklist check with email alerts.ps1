@@ -3,7 +3,7 @@ param
     $IP = '111.222.333.444' 
 )
 
-$adminemail = 'admin.domain.com'
+$adminemail = 'admin@domain.com'
 $fromemail = 'rblcheck@domain.com'
 $mailserver = 'mail.domain.com'
 $subjectfail = 'RBL listing detected!'
