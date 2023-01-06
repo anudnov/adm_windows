@@ -14,7 +14,7 @@ Get-DedupJob
 Start-DedupJob -Type Optimization -Volume D: -Memory 75 -Cores 75 -Priority High
 ```
 #### Data integrity scrubbing job:
-The Integrity Scrubbing job identifies corruption in the chunk store due to disk failures or bad sectors. When possible, Data Deduplication can automatically use volume features (such as mirror or parity on a Storage Spaces volume) to reconstruct the corrupted data. Additionally, Data Deduplication keeps backup copies of popular chunks when they are referenced more than 100 times in an area called the hotspot.
+The Integrity Scrubbing job identifies corruption in the chunk store due to disk failures or bad sectors.
 ```
 Start-DeDupJob -Type Scrubbing -Volume D: -Memory 75 -Cores 75 -Priority High
 ```
