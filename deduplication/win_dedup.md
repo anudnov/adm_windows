@@ -1,3 +1,12 @@
+#### To return a list of the volumes that have been enabled for data deduplication
+```
+Get-DedupVolume
+```
+```
+Get-DedupVolume | format-list
+```
+
+
 Get-DedupJob
 
 Start-DedupJob -Type Optimization -Volume D: -Memory 75 -Cores 75 -Priority High
