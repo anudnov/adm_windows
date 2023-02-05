@@ -4,8 +4,9 @@
 - Original post: [Veeam Support Knowledge Base](https://www.veeam.com/kb1727) 
 
 
-### Critical Details
 
+#### 1. 
+#### Critical Details
 ```
   The following steps will forcibly terminate ALL active jobs/restores. 
   Ensure that all tasks that can be stopped have stopped before proceeding. 
@@ -13,7 +14,6 @@
   If you are unsure, rather than terminating jobs with brute force, collect logs and open a support case to ask a Veeam Support engineer to review and assess whether a background task is occurring.
 ```
 
-#### 1. 
 _Stop and Disable all other jobs.s
 This is done to ensure active jobs can finish their current tasks cleanly.
 (Optional) Backup Jobs may be Gracefully stopped allowing them to complete their current tasks.
