@@ -1,5 +1,6 @@
-How to Forcibly Stop Jobs That Are Stuck in ‘Stopping’ Status
-Original post: [Veeam Support Knowledge Base](https://www.veeam.com/kb1727)
+#### How to Forcibly Stop Jobs That Are Stuck in ‘Stopping’ Status
+
+- Original post: [Veeam Support Knowledge Base](https://www.veeam.com/kb1727)
 
 ### Critical Details
 
