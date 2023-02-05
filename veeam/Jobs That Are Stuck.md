@@ -1,4 +1,11 @@
 How to Forcibly Stop Jobs That Are Stuck in ‘Stopping’ Status
+```diff
++ Green
+- Red
+! Orange
+@@ Pink @@
+# Gray
+...
 
 ![Red text](Critical Details)
 ```
