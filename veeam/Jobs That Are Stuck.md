@@ -1,7 +1,6 @@
 How to Forcibly Stop Jobs That Are Stuck in ‘Stopping’ Status
 
-
-** Critical Details **
+![Red text](Critical Details)
 ```
   The following steps will forcibly terminate ALL active jobs/restores.
   Ensure that all tasks that can be stopped have stopped before proceeding.
