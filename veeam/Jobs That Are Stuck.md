@@ -1,7 +1,7 @@
 How to Forcibly Stop Jobs That Are Stuck in ‘Stopping’ Status
 
 #### Critical Details
-
+`#0969DA`
 
 ```
   The following steps will forcibly terminate ALL active jobs/restores.
@@ -10,6 +10,7 @@ How to Forcibly Stop Jobs That Are Stuck in ‘Stopping’ Status
   If you are unsure, rather than terminating jobs with brute force, 
   collect logs and open a support case to ask a Veeam Support engineer to review and assess whether a background task is occurring.
 ```
+
 1. Stop and Disable all other jobs.
 This is done to ensure active jobs can finish their current tasks cleanly.
 (Optional) Backup Jobs may be Gracefully stopped allowing them to complete their current tasks.
@@ -33,8 +34,8 @@ PowerShell:
 ```
 Stop-Process -Name VeeamAgent
 ```
-Wait 5-10 minutes for the tasks to time out and fail. 
-Remove snapshots from VM(s) that are part of the stuck jobs.
+- Wait 5-10 minutes for the tasks to time out and fail. 
+  Remove snapshots from VM(s) that are part of the stuck jobs.
 
 3. VMware Environments: If the Backup/Replication Jobs were using the Virtual Appliance (HOTADD) transport mode, before removing the snapshots make sure there are no stuck disks on the Veeam Backup server or one of the backup proxies. Otherwise, the snapshots can be orphaned. https://vee.am/kb1775
 Start the services that were stopped in step 2.
