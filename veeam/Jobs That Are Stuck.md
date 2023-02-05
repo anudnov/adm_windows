@@ -15,7 +15,7 @@
 ```
 
 #### 1. 
-_Stop and Disable all other jobs.
+_Stop and Disable all other jobs.s
 This is done to ensure active jobs can finish their current tasks cleanly.
 (Optional) Backup Jobs may be Gracefully stopped allowing them to complete their current tasks.
 Backup Copy Jobs have no "Stop" option, instead Disabling the job will trigger it to begin stopping procedures.
