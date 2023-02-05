@@ -11,13 +11,12 @@ How to Forcibly Stop Jobs That Are Stuck in ‘Stopping’ Status
 ```
 
 #### 1. 
-Stop and Disable all other jobs.
+_Stop and Disable all other jobs.
 This is done to ensure active jobs can finish their current tasks cleanly.
 (Optional) Backup Jobs may be Gracefully stopped allowing them to complete their current tasks.
 Backup Copy Jobs have no "Stop" option, instead Disabling the job will trigger it to begin stopping procedures.
 Close the Veeam Backup & Replication console.
-Stop all services that begin with the word Veeam.
-Note: If other Veeam software is installed on the same server (e.g.,  Veeam ONE, Veeam Agent for Microsoft Windows, Veeam Backup for Microsoft 365) stopping their services will interupt their operations.
+Stop all services that begin with the word Veeam._
 
 PowerShell:
 Get-Service Veeam* | Stop-Service
@@ -28,8 +27,8 @@ Get-Service Veeam* | Stop-Service
 ```
 
 #### 2. 
-Open the Task Manager on the Veeam Server and kill all VeeamAgent.exe processes.
-Note: Some VeeamAgent.exe processes will be located on Source Proxies and Windows Repositories that are not the Veeam Server.
+_Open the Task Manager on the Veeam Server and kill all VeeamAgent.exe processes.
+Note: Some VeeamAgent.exe processes will be located on Source Proxies and Windows Repositories that are not the Veeam Server._
 
 PowerShell:
 ```
@@ -39,9 +38,7 @@ Stop-Process -Name VeeamAgent
   Remove snapshots from VM(s) that are part of the stuck jobs.
 
 #### 3. 
-VMware Environments: If the Backup/Replication Jobs were using the Virtual Appliance (HOTADD) transport mode, before removing the snapshots make sure there are no stuck disks on the Veeam Backup server or one of the backup proxies. Otherwise, the snapshots can be orphaned. https://vee.am/kb1775
-Start the services that were stopped in step 2.
-
+Start services.
 PowerShell:
 ```
 Get-Service Veeam* | Start-Service
