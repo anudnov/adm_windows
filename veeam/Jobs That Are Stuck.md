@@ -1,5 +1,7 @@
+![This is an image](https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Veeam_logo_topaz_2019.png/120px-Veeam_logo_topaz_2019.png) 
 #### How to Forcibly Stop Jobs That Are Stuck in ‘Stopping’ Status
-![This is an image](https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Veeam_logo_topaz_2019.png/120px-Veeam_logo_topaz_2019.png) Original post: [Veeam Support Knowledge Base](https://www.veeam.com/kb1727) 
+
+- Original post: [Veeam Support Knowledge Base](https://www.veeam.com/kb1727) 
 
 
 ### Critical Details
