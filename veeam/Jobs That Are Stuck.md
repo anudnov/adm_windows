@@ -8,8 +8,9 @@ diff
 # Gray
 ```
 
-- Red #### Critical Details
+#### Critical Details
 
+- Red (TEXT)
 ```
   The following steps will forcibly terminate ALL active jobs/restores.
   Ensure that all tasks that can be stopped have stopped before proceeding.
