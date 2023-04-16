@@ -1,8 +1,8 @@
 # Set the directory path to search in
 $directoryPath = "D:\demo"
 
-# Get all empty folders in the directory
-$emptyFolders = Get-ChildItem $directoryPath -Directory -Recurse | Where-Object { $_.GetFileSystemInfos().Count -eq 0 }
+# Get all empty folders in the directory, excluding "Snapshots"
+$emptyFolders = Get-ChildItem $directoryPath -Directory -Recurse | Where-Object { $_.GetFileSystemInfos().Count -eq 0 -and $_.Name -ne "TEMP" }
 
 # Loop through each empty folder and check its last modified date
 foreach ($folder in $emptyFolders) {
