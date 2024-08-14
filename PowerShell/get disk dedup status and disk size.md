@@ -1,3 +1,21 @@
+#### get disk dedup status and disk size
+```
+# Get partition information with size, free space, and free space percentage
+$partitions = Get-Volume | Select-Object @{Name='Partition';Expression={$_.DriveLetter}},
+                                  @{Name='Size (TB)';Expression={[math]::Round($_.Size/1TB, 2)}},
+                                  @{Name='Free Space (TB)';Expression={[math]::Round($_.SizeRemaining/1TB, 2)}},
+                                  @{Name='Free Space (%)';Expression={[math]::Round(($_.SizeRemaining/$_.Size)*100, 2)}}
+
+# Get deduplication job information
+$dedupJobs = Get-DedupJob | Select-Object Volume, Type, Status, Progress, StartTime, EndTime
+
+# Print partition information
+$partitions | Format-Table -AutoSize
+
+# Print deduplication job information
+$dedupJobs | Format-Table -AutoSize
+
+```
 #### get disk dedup status and disk size to email
 ```
 # Define the SMTP server and email details
