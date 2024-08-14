@@ -1,5 +1,6 @@
 #### PowerShell script that will help you find duplicate files in the f:\backup directory and move them to c:\temp.
 ```
+
 # Define the source and destination directories
 $sourceDir = "f:\backup"
 $destinationDir = "c:\temp"
