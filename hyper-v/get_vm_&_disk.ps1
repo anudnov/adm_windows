@@ -1,4 +1,4 @@
-Get-VM -ComputerName hyperv51 | ForEach-Object {
+Get-VM -ComputerName HYPERV-SERVER | ForEach-Object {
     $vm = $_
     Get-VMHardDiskDrive -VMName $vm.Name -ComputerName hyperv51 | ForEach-Object {
         $vhd = Get-VHD -Path $_.Path -ComputerName hyperv51
